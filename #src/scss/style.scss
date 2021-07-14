@@ -1,0 +1,108 @@
+@import "variables";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family : $font_name;
+		font-display: swap;
+		src         : url("../fonts/#{$file_name}.woff") format("woff"),
+		url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style : #{$style};
+	}
+}
+
+*,
+*:before,
+*:after {
+	padding   : 0;
+	margin    : 0;
+	border    : 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height   : 100%;
+	width    : 100%;
+	min-width: 320px;
+}
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize  : $pcSize - $mobSize;
+	font-size : calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / (1280 - 320)));
+}
+
+@mixin bg-color-btn($baseColor) {
+	border-color: lighten($baseColor, 3%) #000 darken($baseColor, 8%);
+	background  : linear-gradient($baseColor, darken($baseColor, 10%));
+
+	&:hover {
+		background: linear-gradient(lighten($baseColor, 4%), darken($baseColor, 8%));
+	}
+
+	&:active {
+		background: linear-gradient(darken($baseColor, 10%), $baseColor);
+	}
+}
+
+.container {
+	max-width: 1210px;
+	padding  : 0 20px;
+	margin   : 0 auto;
+}
+
+.title {
+	font-family: Poppins;
+	line-height: 48px;
+	font-weight: 300;
+	color      : $mainColorTitle;
+	@include adaptiv-font(48, 30);
+}
+
+.btn {
+	padding         : 14px 50px;
+	border-radius   : 25px;
+	background-color: $mainBgColorButton;
+	font-family     : Poppins;
+	font-size       : 12px;
+	line-height     : 1.2;
+	font-weight     : 400;
+	text-transform  : uppercase;
+	color           : #ffffff;
+	cursor          : pointer;
+	outline         : none;
+
+	@media (max-width: 400px) {
+		padding: 15px 30px;
+	}
+}
+
+.btn-volume {
+	border-width: 2px 0;
+	border-style: solid none;
+	transition  : 0.2s;
+	@include bg-color-btn($mainBgColorButton);
+
+	&:focus-visible {
+		box-shadow: 0 0 2px 2px #005fcc;
+	}
+}
+
+@import "fontello";
+@import "fonts";
+@import "header";
+@import "main";
+@import "about";
+@import "classes";
+@import "yoga";
+@import "instructors";
+@import "challenge";
+@import "partners";
+@import "footer";
+
+.padding-mobile {
+	@media (max-width: 500px) {
+		padding-top   : 70px;
+		padding-bottom: 70px;
+	}
+}

@@ -1,0 +1,57 @@
+.challenge {
+  background-color: #f1f3f8;
+
+  &__wrapper {
+    padding        : 200px 20px;
+    display        : flex;
+    justify-content: center;
+    position       : relative;
+  }
+
+  &__body {
+    display       : flex;
+    flex-direction: column;
+    width         : 70%;
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+
+    .title-section {
+      max-width : 500px;
+      text-align: left;
+    }
+
+    h3 {
+      font-family: Poppins;
+      font-size  : 48px;
+      line-height: 48px;
+      font-weight: 300;
+      color      : $mainColorTitle;
+    }
+
+    p {
+      font-family: Lato;
+      font-size  : 21px;
+      line-height: 36px;
+      font-weight: 400;
+      color      : $mainColorText;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    bottom  : 0;
+    right   : 20px;
+    width   : 30%;
+
+    img {
+      width  : 70%;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}

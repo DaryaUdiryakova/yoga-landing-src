@@ -1,0 +1,52 @@
+[class^="_icon-"]:before,
+[class*=" _icon-"]:before {
+  font-family            : "fontello";
+  font-style             : normal;
+  font-weight            : normal;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-user:before {
+  content: '\e800';
+}
+
+._icon-clock:before {
+  content: '\e801';
+}
+
+._icon-heart:before {
+  content: '\e802';
+}
+
+._icon-down-big:before {
+  content: '\e803';
+}
+
+._icon-left-open:before {
+  content: '\e804';
+}
+
+._icon-right-open:before {
+  content: '\e805';
+}
+
+._icon-twitter:before {
+  content: '\f099';
+}
+
+._icon-facebook:before {
+  content: '\f09a';
+}
+
+._icon-gplus:before {
+  content: '\f0d5';
+}
+
+._icon-level-up:before {
+  content: '\f148';
+}
+
+._icon-pinterest:before {
+  content: '\f231';
+}

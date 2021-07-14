@@ -1,0 +1,142 @@
+.instructors {
+
+  &__header {
+    background: url('/img/instructors/bg-instructors.png') no-repeat center right / cover;
+
+    .title-section {
+      margin: 0 auto;
+
+      h3,
+      p,
+      span {
+        color: #ffffff;
+      }
+
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__wrapper-header {
+    padding: 100px 20px;
+
+    .instructors__arrow {
+      margin-top               : 20px;
+      animation-name           : fadeOutDown;
+      animation-duration       : 2s;
+      animation-fill-mode      : both;
+      animation-iteration-count: infinite;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:before {
+      font-size  : 14px;
+      font-weight: 400;
+      color      : #fff;
+    }
+  }
+
+  @keyframes fadeOutDown {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity  : 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  &__wrapper-body {
+    padding: 50px 20px 100px;
+  }
+
+  &__arrow {
+    width          : 40px;
+    height         : 40px;
+    border         : 2px solid #ffffff;
+    border-radius  : 50%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin         : 0 auto;
+  }
+
+  &__items {
+    display              : grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 1120px) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items        : center;
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items        : start;
+    }
+  }
+
+  .instructors-item {
+    display    : flex;
+    align-items: center;
+    margin-top : 50px;
+    width      : auto;
+    margin-left: 30px;
+
+    @media (max-width: 1120px) {
+      min-width: 280px;
+    }
+
+    @media (max-width: 700px) {
+      margin-left: 10px;
+    }
+
+    &__image {
+      width        : 80px;
+      height       : 80px;
+      border-radius: 50%;
+    }
+
+    &__text {
+      margin-left: 10px;
+
+      h6 {
+        font-family: Poppins;
+        font-size  : 16px;
+        line-height: 24px;
+        font-weight: 600;
+        color      : #000000;
+      }
+
+      p {
+        font-family: Lato;
+        font-size  : 14px;
+        line-height: 24px;
+        font-weight: 400;
+        color      : #999999;
+      }
+    }
+  }
+
+  #btn-toogle {
+    display: none;
+
+    @media (max-width: 600px) {
+      display: block;
+      margin : 50px auto 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #toogle-instructors-item {
+      max-height: 0;
+      overflow  : hidden;
+      transition: max-height .3s ease;
+    }
+  }
+}

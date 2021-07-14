@@ -1,0 +1,19 @@
+.partners {
+
+  &__wrapper {
+    padding        : 75px 10px;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    flex-wrap      : wrap;
+
+    @media (max-width: 1000px) {
+      justify-content: space-around;
+    }
+
+    img {
+      margin: 15px;
+      width : 90px;
+    }
+  }
+}

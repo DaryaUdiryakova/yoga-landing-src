@@ -1,0 +1,83 @@
+.yoga {
+
+  &__wrapper {
+    padding: 80px 20px;
+  }
+
+  &__header {
+    margin: 0 auto 50px;
+  }
+}
+
+.title-section {
+  max-width : 650px;
+  text-align: center;
+
+  h3 {
+    font-family: Poppins;
+    font-size  : 32px;
+    line-height: 36px;
+    font-weight: 300;
+    color      : #000000;
+  }
+
+  p,
+  span {
+    font-family: Lato;
+    font-size  : 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color      : #666666;
+    margin     : 25px 0 40px;
+  }
+}
+
+.yoga-body-section {
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: center;
+
+  img {
+    margin-top: 25px;
+    width     : 100%;
+
+    @media (max-width: 796px) {
+      margin-top: 5px;
+    }
+  }
+}
+
+.yoga-body-item {
+
+  &__left {
+    max-width      : 770px;
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+  }
+
+  &__top {
+    display        : flex;
+    justify-content: space-between;
+    width          : 100%;
+
+    @media (max-width: 796px) {
+      .fix-size-1 {
+        padding-right: 5px;
+      }
+
+      .fix-size-2 {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  &__right {
+    max-width  : 370px;
+    margin-left: 30px;
+
+    @media (max-width: 1220px) {
+      display: none;
+    }
+  }
+}
