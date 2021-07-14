@@ -242,7 +242,7 @@
       }
     }
 
-    .container--active>h6:after {
+    .item-active>h6:after {
       display   : inline-block;
       transform : rotate(45deg);
       transition: all .3s ease;
